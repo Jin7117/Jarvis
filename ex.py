@@ -205,9 +205,4 @@ def focus_or_open():
     return False
 
 
-def searchYoutube(query):
-    smart_search("youtube")
-    time.sleep(3)
-    pyautogui.press('/')
-    pyautogui.write(query, interval=0.05)
-    pyautogui.press('enter')
+smart_search("youtube")
