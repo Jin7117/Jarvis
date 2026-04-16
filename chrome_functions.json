@@ -25,7 +25,7 @@
             "url": "https://www.google.com"
         },
         {
-            "name": "UPESLMS",
+            "name": "LMS",
             "url": "https://lms.upes.ac.in/my/courses.php"
         },
         {
@@ -39,6 +39,10 @@
         {
             "name": "w3schools python",
             "url": "https://www.w3schools.com/python/"
+        },
+        {
+            "name": "wiki",
+            "url": "https://www.wikipedia.org/"
         }
     ]
 }

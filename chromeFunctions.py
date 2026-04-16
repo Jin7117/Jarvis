@@ -3,6 +3,10 @@ import time
 import linkFunctions
 import pygetwindow as gw
 
+screen_width, screen_height = pyautogui.size()
+center_x = screen_width // 2
+center_y = screen_height // 2
+
 
 # -------------------------
 # BASIC CONTROL
@@ -13,7 +17,7 @@ def open_chrome():
     pyautogui.write('chrome', interval=0.05)
     time.sleep(1)
     pyautogui.press('enter')
-    time.sleep(1)
+    time.sleep(3)
     pyautogui.press('tab')
     time.sleep(0.5)
     pyautogui.press('enter')
@@ -29,12 +33,15 @@ def close_chrome():
 
 def close_all_chrome():
     print("You sure you wanna close all windows of chrome?")
-    target = input("y or n")
+    target = input("y or n -> ")
     if target == "y":
         window = find_chrome_window()
         if window:
-            switch_to_window()
-            pyautogui.hotkey('ctrl', 'shift', 'q')
+            switch_to_window(window)
+            pyautogui.moveTo(center_x, center_y)
+            pyautogui.click()
+            time.sleep(2)
+            pyautogui.hotkey('ctrl', 'shift', 'w')
         else :
             print("No window available")
     else:
@@ -209,5 +216,22 @@ def searchYoutube(query):
     smart_search("youtube")
     time.sleep(3)
     pyautogui.press('/')
+    pyautogui.hotkey('ctrl', 'a')
+    pyautogui.press('backspace')
+    time.sleep(0.5)   
+    pyautogui.write(query, interval=0.05)
+    pyautogui.press('enter')
+
+def searchGithub(query):
+    smart_search("github")
+    time.sleep(3)
+    pyautogui.press('/')
+    pyautogui.write(query, interval=0.05)
+    pyautogui.press('enter')
+
+
+def searchWiki(query):
+    smart_search("wiki")
+    time.sleep(3)
     pyautogui.write(query, interval=0.05)
     pyautogui.press('enter')

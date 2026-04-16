@@ -69,6 +69,7 @@ REPLACEMENTS = {
     "launch": "open",
     "start": "open",
     "bring up": "open",
+    "call": "open",
     "check": "show",
     "view": "show",
     "display": "show",
@@ -101,8 +102,12 @@ REPLACEMENTS = {
     "adjust": "edit",
     "revise": "edit",
     "correct": "edit",
-    "wiki":"wikipedia",
-    "quit":"close"
+    "wikipedia":"wiki",
+    "quit":"close",
+    "information":"usage",
+    "computer details":"usage",
+    "pc details":"usage",
+    "get":"usage"
 }
 
 

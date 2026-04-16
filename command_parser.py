@@ -1,12 +1,14 @@
+
+
 def classify_sentence(sentence: str):
     # Define keyword groups
-    actions = ["open", "close", "find", "search", "delete", "create"]
-    targets = ["chrome", "youtube", "wikipedia", "github", "upes", "lms", "aniwatch", "incognito"]
+    actions = ["open", "close", "find", "search", "delete", "create"  , "usage", "show"]
+    targets = ["chrome", "youtube", "file", "folder" ,"wiki", "github", "aniwatch", "incognito", "spotify", "system", "victoria", "chatgpt"]
 
     STOPWORDS = {
         "the", "a", "an", "please", "for", "me", "to", "and",
         "on", "in", "at", "of", "is", "are", "was", "were",
-        "can", "you", "could", "would", "should", "my"
+        "can", "you", "could", "would", "should", "my", "named"
     }
     
     words = sentence.lower().split()
